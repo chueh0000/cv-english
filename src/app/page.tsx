@@ -119,7 +119,7 @@ export default function Page() {
           </p>
         </Section> */}
         <Section>
-          <h2 className="text-xl font-bold">學歷</h2>
+          <h2 className="text-xl font-bold">Education</h2>
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
@@ -139,7 +139,7 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">技能</h2>
+          <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
               return <Badge key={skill}>{skill}</Badge>;
@@ -147,7 +147,7 @@ export default function Page() {
           </div>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">語文能力</h2>
+          <h2 className="text-xl font-bold">Certificates</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.languages.map((language) => {
               return <Badge key={language}>{language}</Badge>;
@@ -155,7 +155,7 @@ export default function Page() {
           </div>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">社團經歷</h2>
+          <h2 className="text-xl font-bold">Club Experience</h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
