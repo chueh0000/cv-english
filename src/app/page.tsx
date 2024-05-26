@@ -155,7 +155,7 @@ export default function Page() {
           </div>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Extracurricular Activity</h2>
+          <h2 className="text-xl font-bold">Extracurricular Activities</h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
