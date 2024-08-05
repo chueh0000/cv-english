@@ -89,7 +89,7 @@ export default function Page() {
                             <social.icon className="size-4" />
                         </a>
                     </Button>
-                    <span className="underline">{social.url}</span>
+                    <a className="underline" href={social.url}>{social.url}</a>
                 </div>
               ))}
             </div>
@@ -155,7 +155,7 @@ export default function Page() {
           </div>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Extracurricular Activities</h2>
+          <h2 className="text-xl font-bold">Experience and Extracurricular Activities</h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
@@ -163,7 +163,7 @@ export default function Page() {
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
                       {work.link ? (
-                        <a className="hover:underline" href={work.link}>
+                        <a className="underline" href={work.link}>
                             {work.company}
                         </a>
                       ) : (
@@ -223,10 +223,10 @@ export default function Page() {
         //     url: RESUME_DATA.personalWebsiteUrl,
         //     title: "Personal Website",
         //   },
-        //   ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-        //     url: socialMediaLink.url,
-        //     title: socialMediaLink.name,
-        //   })),
+          ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
+            url: socialMediaLink.url,
+            title: socialMediaLink.name,
+          })),
         ]}
       />
     </main>
