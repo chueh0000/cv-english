@@ -48,7 +48,7 @@ export const RESUME_DATA = {
         start: "2024.07",
         end: "2024.08",
         description:
-            "Starting with the idea of creating an accessibility tool, our team collaborated to develop a real-time speech summary software. We used OpenAI Whisper for speech-to-text conversion, Google Gemini for summarization, and create the prototype with Streamlit while keeping the modularity. The summary and speech-to-text modules can be replaced or upgraded with better services in the future. Our source code is public on GitHub, where we will continue to build more function on top of the prototype. We also plan to gather user feedback to enhance our software. This project has been a great opportunity for me to learn about the development process, from ideation to deployment, and to work with a diverse team.",
+            "Starting with the idea of creating an accessibility tool, our team collaborated to develop a real-time speech summary software. We used OpenAI Whisper for speech-to-text conversion, Google Gemini for summarization, and create the prototype with Streamlit while keeping the modularity. The summary and speech-to-text modules can be replaced or upgraded with better services in the future. Our source code is public on GitHub, where we will continue to build more function on top of the prototype, utilizing the collaboration and version control features. We also plan to gather user feedback to enhance our software. This project has been a great opportunity for me to learn about the development process, from ideation to deployment, and to work with a diverse team.",
     },
     {
       company: "NTU Disabled Students' Rights Association",
