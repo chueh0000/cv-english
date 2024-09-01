@@ -27,7 +27,7 @@ export const RESUME_DATA = {
   education: [
     {
       school: "National Taiwan University",
-      degree: "3rd Year, Computer Science and Information Engineering",
+      degree: "4th Year, Computer Science and Information Engineering",
       start: "2021",
       end: "Now",
     },
@@ -48,7 +48,10 @@ export const RESUME_DATA = {
         start: "2024.07",
         end: "2024.08",
         description:
-            "Starting with the idea of creating an accessibility tool, our team collaborated to develop a real-time speech summary software. We used OpenAI Whisper for speech-to-text conversion, Google Gemini for summarization, and create the prototype with Streamlit while keeping the modularity. The summary and speech-to-text modules can be replaced or upgraded with better services in the future. Our source code is public on GitHub, where we will continue to build more function on top of the prototype, utilizing the collaboration and version control features. We also plan to gather user feedback to enhance our software. This project has been a great opportunity for me to learn about the development process, from ideation to deployment, and to work with a diverse team.",
+            "Starting with the idea of creating an accessibility tool, our team collaborated to develop a real-time speech summary software in less than one month\n\
+            Using OpenAI Whisper for speech-to-text conversion, Google Gemini for summarization, and create the prototype with Streamlit while keeping the modularity (the summary and speech-to-text modules can be replaced or upgraded with better services in the future)\n\
+            Our source code is public on GitHub, where we will continue to build more function on top of the prototype, utilizing the collaboration and version control features\n\
+            Learn about the development process, from ideation to deployment, and to work with a diverse team",
     },
     {
       company: "NTU Disabled Students' Rights Association",
@@ -59,7 +62,10 @@ export const RESUME_DATA = {
       start: "2022",
       end: "2024",
       description:
-        "Provide a platform for students with disabilities to interact with each other and hold seminars on disability issues to raise public awareness. We also actively collaborate with external partners and the NTNU Disability Students’ Rights Association to jointly organize the first Youth Disability Rights Empowerment Camp. Additionally, we plan to establish the Taiwan Youth Disability Association to unite the voices of the younger generation of people with disabilities, promote interaction and connections, and form a community with a shared identity.",
+        "Provide a platform for students with disabilities to interact with each other\n\
+        Hold seminars on disability issues to raise public awareness\n\
+        Actively collaborate with external partners and the NTNU Disability Students’ Rights Association to jointly organize the first Youth Disability Rights Empowerment Camp\n\
+        Plan to establish the Taiwan Youth Disability Association to unite the voices of the younger generation of people with disabilities, promote interaction and connections, and form a community with a shared identity",
     },
     {
       company: "Special Education Promotion Committee",
@@ -70,7 +76,8 @@ export const RESUME_DATA = {
       start: "2023",
       end: "2024",
       description:
-        "Assist the school in creating a friendly and accessible campus environment, and ensure the openness and accessibility of information by publicly sharing the progress of meeting proposals through a Notion webpage",
+        "Assist the school in creating a friendly and accessible campus environment\n\
+        Ensure the openness and accessibility of information by publicly sharing the progress of meeting proposals through a Notion webpage",
     },
     {
       company: "Student Grievance Review Committee",
@@ -81,7 +88,7 @@ export const RESUME_DATA = {
       start: "2022",
       end: "2024",
       description:
-        "Review student grievance cases.",
+        "Review student grievance cases",
     },
     {
         company: "NTU Cycling Club",
@@ -92,7 +99,8 @@ export const RESUME_DATA = {
         start: "2022",
         end: "2023",
         description:
-            "Manage, repair, and maintain the club's bicycles, organize riding events, and lead members to complete \"Cycling around Taiwan\", \"Northern Approach to Wuling\", \"Suhua Highway\", and \"Hualien-Taitung Valley\" rides.",
+            "Manage, repair, and maintain the club's bicycles\n\
+            Organize riding events, and lead members to complete \"Cycling around Taiwan\", \"Northern Approach to Wuling\", \"Suhua Highway\", and \"Hualien-Taitung Valley\" rides",
     },
   ],
   skills: [

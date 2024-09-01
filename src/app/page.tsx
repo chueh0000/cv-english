@@ -192,7 +192,12 @@ export default function Page() {
                   </h4>
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">
-                  {work.description}
+                    {/* {work.description} */}
+                    {work.description.split('\n').map((line, index) => (
+                        <div key={index}>
+                        <span>&bull; {line}</span>
+                        </div>
+                    ))}
                 </CardContent>
               </Card>
             );
