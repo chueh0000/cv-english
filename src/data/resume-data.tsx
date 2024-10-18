@@ -41,7 +41,7 @@ export const RESUME_DATA = {
   work: [
     {
         company: "Microsoft Engage — Training Program for University Students with Disabilities",
-        link: "",
+        link: "https://github.com/chueh0000/Realtime-Speech-Summary",
         badges: [],
         title: "",
         //   logo: ,
@@ -50,8 +50,7 @@ export const RESUME_DATA = {
         description:
             "Starting with the idea of creating an accessibility tool, our team collaborated to develop a real-time speech summary software in less than one month\n\
             Using OpenAI Whisper for speech-to-text conversion, Google Gemini for summarization, and create the prototype with Streamlit while keeping the modularity (the summary and speech-to-text modules can be replaced or upgraded with better services in the future)\n\
-            Our source code is public on GitHub, where we will continue to build more function on top of the prototype, utilizing the collaboration and version control features\n\
-            Learn about the development process, from ideation to deployment, and to work with a diverse team",
+            Our source code is public on GitHub, where we will continue to build more function on top of the prototype, utilizing the collaboration and version control features",
     },
     {
       company: "NTU Disabled Students' Rights Association",
