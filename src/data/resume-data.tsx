@@ -107,6 +107,8 @@ export const RESUME_DATA = {
     "Python",
     "Git",
     "Unix",
+    "Verilog",
+    "CUDA C/C++",
   ],
   languages: [
     "TOEIC 915",
