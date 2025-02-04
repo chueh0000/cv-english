@@ -12,7 +12,7 @@ export const RESUME_DATA = {
   summary:
     "",
   avatarUrl: "https://drive.google.com/a/g.ntu.edu.tw/thumbnail?id=1VbKRC073t_dflOUn22imdybCLDtJYK3E",
-//   personalWebsiteUrl: "",
+  personalWebsiteUrl: "https://chueh-chung-hao.vercel.app/",
   contact: {
     email: "b10902076@csie.ntu.edu.tw",
     tel: "0971612015",
@@ -49,8 +49,8 @@ export const RESUME_DATA = {
         end: "2024.08",
         description:
             "Starting with the idea of creating an accessibility tool, our team collaborated to develop a real-time speech summary software in less than one month\n\
-            Using OpenAI Whisper for speech-to-text conversion, Google Gemini for summarization, and create the prototype with Streamlit while keeping the modularity (the summary and speech-to-text modules can be replaced or upgraded with better services in the future)\n\
-            Our source code is public on GitHub, where we will continue to build more function on top of the prototype, utilizing the collaboration and version control features",
+            Using OpenAI Whisper for speech-to-text conversion, Google Gemini for summarization, and created the prototype with Streamlit\n\
+            Our source code is public on GitHub, where we utilized the collaboration and version control features",
     },
     {
       company: "NTU Disabled Students' Rights Association",
