@@ -1,6 +1,6 @@
 import {
 } from "@/images/logos";
-import { GitHubIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "闕中豪 Chueh Chung Hao",
@@ -18,12 +18,19 @@ export const RESUME_DATA = {
     email: "b10902076@csie.ntu.edu.tw",
     tel: "0971612015",
     social: [
-      {
-        name: "GitHub",
-        url: "https://github.com/chueh0000",
-        icon: GitHubIcon,
-      },
-    ],
+        {
+          name: "GitHub",
+          text: "chueh0000",
+          url: "https://github.com/chueh0000",
+          icon: GitHubIcon,
+        },
+        {
+          name: "LinkedIn",
+          text: "Chung Hao Chueh",
+          url: "https://www.linkedin.com/in/chung-hao-chueh-7b939031a",
+          icon: LinkedInIcon,
+        }
+      ],
   },
   education: [
     {
