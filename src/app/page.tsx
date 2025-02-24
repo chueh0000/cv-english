@@ -129,11 +129,21 @@ export default function Page() {
                       {education.school}
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
+                        {education.start ? (<div>{education.start} - {education.end}</div>) : (education.end)}
                     </div>
                   </div>
                 </CardHeader>
+
                 <CardContent className="mt-2">{education.degree}</CardContent>
+                {education.description ? (
+                    <CardContent className="mt-2 text-xs" style={{ whiteSpace: 'pre-line' }}>
+                        {education.description.split('\n').map((line, index, array) => (
+                            <div key={index} style={{ marginBottom: index === array.length - 1 ? '10px' : '0' }}>
+                            <span>&bull; {line}</span>
+                            </div>
+                        ))}
+                    </CardContent>
+                ) : null}
               </Card>
             );
           })}
@@ -187,14 +197,16 @@ export default function Page() {
                     </div>
                   </div>
 
-                  <h4 className="font-mono text-sm leading-none">
-                    {work.title}
-                  </h4>
+                  {work.title ? (
+                        <h4 className="font-mono text-sm leading-none">
+                            {work.title}
+                        </h4>
+                    ) : null}
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">
                     {/* {work.description} */}
-                    {work.description.split('\n').map((line, index) => (
-                        <div key={index}>
+                    {work.description.split('\n').map((line, index, array) => (
+                        <div key={index} style={{ marginBottom: index === array.length - 1 ? '10px' : '0' }}>
                         <span>&bull; {line}</span>
                         </div>
                     ))}

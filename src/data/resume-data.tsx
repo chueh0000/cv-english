@@ -16,7 +16,7 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://chueh-chung-hao.vercel.app/",
   contact: {
     email: "b10902076@csie.ntu.edu.tw",
-    tel: "0971612015",
+    tel: "(+886)971612015",
     social: [
         {
           name: "GitHub",
@@ -36,14 +36,24 @@ export const RESUME_DATA = {
     {
       school: "National Taiwan University",
       degree: "4th Year, Computer Science and Information Engineering",
-      start: "2021",
-      end: "Now",
+      start: "",
+      end: "Expected June 2026",
+      description: "UNIX System Programming\n\
+                    Computer Architecture\n\
+                    Computer Networks\n\
+                    Parallel Programming\n\
+                    Digital Systems Design and Laboratory\n\
+                    Computer System Laboratory\n\
+                    Foundations of Artificial Intelligence\n\
+                    Introduction to Generative Artificial Intelligence\n\
+                    Introduction to Intelligent Vehicles",
     },
     {
       school: "Taichung Municipal Taichung First Senior High School",
       degree: "General Subjects",
       start: "2018",
       end: "2021",
+      description: "",
     },
   ],
   work: [
