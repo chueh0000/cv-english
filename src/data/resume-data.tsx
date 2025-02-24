@@ -11,7 +11,8 @@ export const RESUME_DATA = {
     "Student at National Taiwan University major in Computer Science and Information Engineering",
   summary:
     "",
-  avatarUrl: "https://drive.google.com/a/g.ntu.edu.tw/thumbnail?id=1VbKRC073t_dflOUn22imdybCLDtJYK3E",
+    // https://drive.google.com/file/d/1KvcMGTF50KMkqn4CTyNuwvzM5wPjde6p/view?usp=drive_link
+  avatarUrl: "https://drive.google.com/a/g.ntu.edu.tw/thumbnail?id=1KvcMGTF50KMkqn4CTyNuwvzM5wPjde6p",
   personalWebsiteUrl: "https://chueh-chung-hao.vercel.app/",
   contact: {
     email: "b10902076@csie.ntu.edu.tw",
