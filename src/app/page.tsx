@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
-      <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
+      <section className="mx-auto w-full max-w-4xl space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
@@ -106,11 +106,12 @@ export default function Page() {
               ) : null}
             </div> */}
           </div>
-
-          <Avatar className="size-28">
-            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-            {/* <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback> */}
-          </Avatar>
+          {RESUME_DATA.avatarUrl ? 
+            <Avatar className="size-28">
+                <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
+                {/* <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback> */}
+            </Avatar>
+          : null}
         </div>
         {/* <Section>
           <h2 className="text-xl font-bold">About</h2>
@@ -118,9 +119,25 @@ export default function Page() {
             {RESUME_DATA.summary}
           </p>
         </Section> */}
+        {RESUME_DATA.jobObjectives.company ? 
+            <Section>
+            <h2 className="text-xl font-bold">Job Objectives</h2>
+            <CardContent className="">{RESUME_DATA.jobObjectives.company}</CardContent>
+                {RESUME_DATA.jobObjectives.positions ? 
+                    <CardContent className="text-xs">
+                    {(RESUME_DATA.jobObjectives.positions as string).split(',').map((line: string, index: number) => (
+                        <div key={index}>
+                        <span>&bull; {line}</span>
+                        </div>
+                    ))}
+                    </CardContent>
+                : null }
+            </Section>
+        : null}
+
         <Section>
           <h2 className="text-xl font-bold">Education</h2>
-          {RESUME_DATA.education.map((education) => {
+          {RESUME_DATA.education.map((education: { school: string; start?: string; end?: string; degree: string; description?: string }) => {
             return (
               <Card key={education.school}>
                 <CardHeader>
