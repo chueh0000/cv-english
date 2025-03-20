@@ -13,6 +13,7 @@ export const RESUME_DATA = {
     "",
     // https://drive.google.com/file/d/1KvcMGTF50KMkqn4CTyNuwvzM5wPjde6p/view?usp=drive_link
   avatarUrl: "https://drive.google.com/a/g.ntu.edu.tw/thumbnail?id=1KvcMGTF50KMkqn4CTyNuwvzM5wPjde6p",
+//   avatarUrl: "",
   personalWebsiteUrl: "https://chueh-chung-hao.vercel.app/",
   contact: {
     email: "b10902076@csie.ntu.edu.tw",
@@ -32,20 +33,20 @@ export const RESUME_DATA = {
         }
       ],
   },
+  jobObjectives: {
+    company: "",
+    positions: "",
+  },
   education: [
     {
       school: "National Taiwan University",
       degree: "4th Year, Computer Science and Information Engineering",
       start: "",
       end: "Expected June 2026",
-      description: "UNIX System Programming\n\
-                    Computer Architecture\n\
-                    Computer Networks\n\
-                    Parallel Programming\n\
-                    Digital Systems Design and Laboratory\n\
-                    Computer System Laboratory\n\
-                    Foundations of Artificial Intelligence\n\
-                    Introduction to Generative Artificial Intelligence\n\
+      description: "UNIX System Programming, Parallel Programming\n\
+                    Computer Architecture, Computer Networks\n\
+                    Digital Systems Design and Laboratory, Computer System Laboratory\n\
+                    Foundations of Artificial Intelligence, Introduction to Generative Artificial Intelligence\n\
                     Introduction to Intelligent Vehicles",
     },
     {
@@ -58,7 +59,7 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-        company: "Microsoft Engage — Training Program for University Students with Disabilities",
+        company: "Microsoft Engage — Training Program for University Students with Disabilities 🔗",
         link: "https://github.com/chueh0000/Realtime-Speech-Summary",
         badges: [],
         title: "",
@@ -66,12 +67,12 @@ export const RESUME_DATA = {
         start: "2024.07",
         end: "2024.08",
         description:
-            "Starting with the idea of creating an accessibility tool, our team collaborated to develop a real-time speech summary software in less than one month\n\
-            Using OpenAI Whisper for speech-to-text conversion, Google Gemini for summarization, and created the prototype with Streamlit\n\
-            Our source code is public on GitHub, where we utilized the collaboration and version control features",
+            "Collaborate to develop an AI-powered realtime speech summarization software in less than one month\n\
+            OpenAI Whisper for speech-to-text conversion, Google Gemini for summarization, and Streamlit for the prototype\n\
+            Our source code is public on GitHub, where we utilize the collaboration and version control features",
     },
     {
-      company: "NTU Disabled Students' Rights Association",
+      company: "Disabled Students' Rights Association, National Taiwan University 🔗",
       link: "https://www.facebook.com/NTUDSRA/",
       badges: [],
       title: "Treasurer → President",
@@ -81,11 +82,10 @@ export const RESUME_DATA = {
       description:
         "Provide a platform for students with disabilities to interact with each other\n\
         Hold seminars on disability issues to raise public awareness\n\
-        Actively collaborate with external partners and the NTNU Disability Students’ Rights Association to jointly organize the first Youth Disability Rights Empowerment Camp\n\
-        Plan to establish the Taiwan Youth Disability Association to unite the voices of the younger generation of people with disabilities, promote interaction and connections, and form a community with a shared identity",
+        Actively collaborate with external partners and the NTNU Disability Students’ Rights Association to jointly organize the first Youth Disability Rights Empowerment Camp",
     },
     {
-      company: "Special Education Promotion Committee",
+      company: "Special Education Promotion Committe, National Taiwan University 🔗",
       link: "https://intriguing-product-094.notion.site/2629b4df7459473a8b3734fc3becd73b?v=3ce71c9085134bc8b424ce622d8526d3&pvs=4",
       badges: [],
       title: "Committee Member (Student Representative)",
@@ -93,11 +93,11 @@ export const RESUME_DATA = {
       start: "2023",
       end: "2024",
       description:
-        "Assist the school in creating a friendly and accessible campus environment\n\
+        "Assist the college in creating a friendly and accessible campus environment for students with disabilities\n\
         Ensure the openness and accessibility of information by publicly sharing the progress of meeting proposals through a Notion webpage",
     },
     {
-      company: "Student Grievance Review Committee",
+      company: "Student Grievance Review Committee, National Taiwan University",
       link: "",
       badges: [],
       title: "Committee Member (Disabled Student Representative)",
@@ -108,7 +108,7 @@ export const RESUME_DATA = {
         "Review student grievance cases",
     },
     {
-        company: "NTU Cycling Club",
+        company: "Cycling Club, National Taiwan University 🔗",
         link: "https://www.instagram.com/ntu_cycling_club",
         badges: [],
         title: "General Affairs",
