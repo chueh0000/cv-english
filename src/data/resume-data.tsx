@@ -1,5 +1,3 @@
-import {
-} from "@/images/logos";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
@@ -11,9 +9,7 @@ export const RESUME_DATA = {
     "Student at National Taiwan University major in Computer Science and Information Engineering",
   summary:
     "",
-    // https://drive.google.com/file/d/1KvcMGTF50KMkqn4CTyNuwvzM5wPjde6p/view?usp=drive_link
-  avatarUrl: "https://drive.google.com/a/g.ntu.edu.tw/thumbnail?id=1KvcMGTF50KMkqn4CTyNuwvzM5wPjde6p",
-//   avatarUrl: "",
+  avatarUrl: "",
   personalWebsiteUrl: "https://chueh-chung-hao.vercel.app/",
   contact: {
     email: "b10902076@csie.ntu.edu.tw",
@@ -41,12 +37,13 @@ export const RESUME_DATA = {
     {
       school: "National Taiwan University",
       degree: "4th Year, Computer Science and Information Engineering",
-      start: "",
+      start: "2021",
       end: "Expected June 2026",
-      description: "UNIX System Programming, Parallel Programming\n\
-                    Computer Architecture, Computer Networks\n\
-                    Digital Systems Design and Laboratory, Computer System Laboratory\n\
+      description: "UNIX System Programming, Parallel Programming, Web Programming and Applications\n\
+                    Computer Architecture, Computer Networks, Operating Systems\n\
+                    Digital Systems Design and Laboratory, Computer System Laboratory, Practical Digital Electronics\n\
                     Foundations of Artificial Intelligence, Introduction to Generative Artificial Intelligence\n\
+                    Engineering Design and Implementation for Sustainable Development\n\
                     Introduction to Intelligent Vehicles",
     },
     {
@@ -57,22 +54,59 @@ export const RESUME_DATA = {
       description: "",
     },
   ],
-  work: [
+  groupProjects: [
     {
-        company: "Microsoft Engage — Training Program for University Students with Disabilities 🔗",
-        link: "https://github.com/chueh0000/Realtime-Speech-Summary",
-        badges: [],
-        title: "",
-        //   logo: ,
-        start: "2024.07",
-        end: "2024.08",
-        description:
-            "Collaborate to develop an AI-powered realtime speech summarization software in less than one month\n\
-            OpenAI Whisper for speech-to-text conversion, Google Gemini for summarization, and Streamlit for the prototype\n\
-            Our source code is public on GitHub, where we utilize the collaboration and version control features",
+      title: "AI-powered Realtime Speech Summarization",
+      link: "https://github.com/chueh0000/Realtime-Speech-Summary",
+      badges: ["Python", "OpenAI Whisper", "Gemini API", "Streamlit"],
+      where: "Microsoft Engage — Training Program for University Students with Disabilities",
+      //   logo: ,
+      start: "2024.07",
+      end: "2024.08",
+      description:
+        "Collaborate to develop an AI-powered realtime speech summarization software in less than one month\n\
+        OpenAI Whisper for speech-to-text conversion, Google Gemini for summarization, and Streamlit for the prototype",
     },
     {
-      company: "Disabled Students' Rights Association, National Taiwan University 🔗",
+      title: "Line Chatbot for Long-Term Care Facilities",
+      link: "https://github.com/chueh0000/ai-line-chatbot",
+      badges: ["Next.js", "Vercel", "Neon (serverless PostgreSQL)"],
+      where: "Engineering Design and Implementation for Sustainable Development, National Taiwan University",
+      //   logo: ,
+      start: "2025.03",
+      end: "2025.06",
+      description:
+        "Collaborate to develop a Line chatbot for communication between long-term care facilities and family members of residents\n\
+        Aim to reduce communication costs and increase transparency\n\
+        Develop with Next.js and serverless PostgreSQL, deploy with Vercel",
+    },
+    {
+      title: "Expense-Splitting Website",
+      link: "https://github.com/SinyinChang/Team18-Final-Project",
+      badges: ["Django", "Docker", "Git"],
+      where: "Web Programming and Applications, National Taiwan University",
+      //   logo: ,
+      start: "2025.03",
+      end: "2025.06",
+      description:
+        "Collaborate to develop an expense-splitting website using Django and containerize with Docker",
+    },
+    {
+      title: "Refreshable Braille Display",
+      link: "https://github.com/chueh0000/Refreshable-Braille-Display",
+      badges: ["Javascript", "ESP32", "Circuit Design", "3D Printing"],
+      where: "Practical Digital Electronics, National Taiwan University",
+      //   logo: ,
+      start: "2025.03",
+      end: "2025.06",
+      description:
+        "Collaborate to create a refreshable braille display, serving as a proof-of-concept for a portable dynamic tactile map\n\
+        Aim to improve navigation for people with visual disabilities, addressing critical limitations of existing technologies",
+    },
+  ],
+  work: [
+    {
+      company: "Disabled Students' Rights Association, National Taiwan University",
       link: "https://www.facebook.com/NTUDSRA/",
       badges: [],
       title: "Treasurer → President",
@@ -85,7 +119,7 @@ export const RESUME_DATA = {
         Actively collaborate with external partners and the NTNU Disability Students’ Rights Association to jointly organize the first Youth Disability Rights Empowerment Camp",
     },
     {
-      company: "Special Education Promotion Committe, National Taiwan University 🔗",
+      company: "Special Education Promotion Committee, National Taiwan University",
       link: "https://intriguing-product-094.notion.site/2629b4df7459473a8b3734fc3becd73b?v=3ce71c9085134bc8b424ce622d8526d3&pvs=4",
       badges: [],
       title: "Committee Member (Student Representative)",
@@ -94,21 +128,21 @@ export const RESUME_DATA = {
       end: "2024",
       description:
         "Assist the college in creating a friendly and accessible campus environment for students with disabilities\n\
-        Ensure the openness and accessibility of information by publicly sharing the progress of meeting proposals through a Notion webpage",
+        Publicly share the progress of meeting proposals through a Notion webpage, ensuring the openness and accessibility of information",
     },
+    // {
+    //   company: "Student Grievance Review Committee, National Taiwan University",
+    //   link: "",
+    //   badges: [],
+    //   title: "Committee Member (Disabled Student Representative)",
+    // //   logo: ,
+    //   start: "2022",
+    //   end: "2024",
+    //   description:
+    //     "Review student grievance cases",
+    // },
     {
-      company: "Student Grievance Review Committee, National Taiwan University",
-      link: "",
-      badges: [],
-      title: "Committee Member (Disabled Student Representative)",
-    //   logo: ,
-      start: "2022",
-      end: "2024",
-      description:
-        "Review student grievance cases",
-    },
-    {
-        company: "Cycling Club, National Taiwan University 🔗",
+        company: "Cycling Club, National Taiwan University",
         link: "https://www.instagram.com/ntu_cycling_club",
         badges: [],
         title: "General Affairs",
@@ -117,7 +151,7 @@ export const RESUME_DATA = {
         end: "2023",
         description:
             "Manage, repair, and maintain the club's bicycles\n\
-            Organize riding events, and lead members to complete \"Cycling around Taiwan\", \"Northern Approach to Wuling\", \"Suhua Highway\", and \"Hualien-Taitung Valley\" rides",
+            Organize riding events and lead members to complete multi-day long rides",
     },
   ],
   skills: [
@@ -127,9 +161,15 @@ export const RESUME_DATA = {
     "Unix",
     "Verilog",
     "CUDA C/C++",
+    "Javascript",
+    "Next.js",
+    "Django",
+    "Docker",
+    "Vercel"
   ],
-  languages: [
+  certificates: [
     "TOEIC 915",
+    "Fundamentals of Accelerated Computing with CUDA C/C++"
   ],
   projects: [
     // {

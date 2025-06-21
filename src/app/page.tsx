@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Image from "next/image";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
@@ -10,6 +11,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
 import Favicon from "/public/favicon.ico"
 import AppleIcon from "/public/apple-icon.png"
+import { MyAvatarImage } from "@/images";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name}`,
@@ -111,7 +113,15 @@ export default function Page() {
                 <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
                 {/* <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback> */}
             </Avatar>
-          : null}
+          : <Image
+              src={MyAvatarImage}
+              alt="My Avatar"
+              width={120}
+              height={167}
+              className="relative flex shrink-0 overflow-hidden rounded-xl"
+              // className="rounded shadow-lg mx-auto"
+            />
+          }
         </div>
         {/* <Section>
           <h2 className="text-xl font-bold">About</h2>
@@ -176,13 +186,64 @@ export default function Page() {
         <Section>
           <h2 className="text-xl font-bold">Certificates</h2>
           <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.languages.map((language) => {
-              return <Badge key={language}>{language}</Badge>;
+            {RESUME_DATA.certificates.map((certificate) => {
+              return <Badge key={certificate}>{certificate}</Badge>;
             })}
           </div>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Experience and Extracurricular Activities</h2>
+          <h2 className="text-xl font-bold">Group Project Experiences</h2>
+          {RESUME_DATA.groupProjects.map((groupProject) => {
+            return (
+              <Card key={groupProject.title}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      {groupProject.link ? (
+                        <a className="underline" href={groupProject.link}>
+                            {groupProject.title} 🔗
+                        </a>
+                      ) : (
+                        <span>{groupProject.title}</span>
+                      )}
+
+                      <span className="inline-flex gap-x-1">
+                        {groupProject.badges.map((badge) => (
+                          <Badge
+                            variant="secondary"
+                            className="align-middle text-xs"
+                            key={badge}
+                          >
+                            {badge}
+                          </Badge>
+                        ))}
+                      </span>
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {groupProject.start} - {groupProject.end ?? "Present"}
+                    </div>
+                  </div>
+
+                  {groupProject.where ? (
+                        <h4 className="font-mono text-sm leading-none">
+                            {groupProject.where}
+                        </h4>
+                    ) : null}
+                </CardHeader>
+                <CardContent className="mt-2 text-xs">
+                    {/* {groupProject.description} */}
+                    {groupProject.description.split('\n').map((line, index, array) => (
+                        <div key={index} style={{ marginBottom: index === array.length - 1 ? '10px' : '0' }}>
+                        <span>&bull; {line}</span>
+                        </div>
+                    ))}
+                </CardContent>
+              </Card>
+            );
+          })}
+        </Section>
+        <Section>
+          <h2 className="text-xl font-bold">Extracurricular Activities</h2>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
@@ -191,7 +252,7 @@ export default function Page() {
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
                       {work.link ? (
                         <a className="underline" href={work.link}>
-                            {work.company}
+                            {work.company} 🔗
                         </a>
                       ) : (
                         <span>{work.company}</span>
