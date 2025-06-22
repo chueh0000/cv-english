@@ -23,6 +23,27 @@ export const metadata: Metadata = {
 ],
 };
 
+type GroupProject = {
+  title: string;
+  link?: string;
+  badges: readonly string[];
+  where: string;
+  start: string;
+  end: string;
+  description: string;
+  // logo?: string;
+};
+type Work = {
+  company: string;
+  link?: string;
+  badges: readonly string[];
+  title: string;
+  start: string;
+  end: string;
+  description: string;
+  // logo?: string;
+};
+
 export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
@@ -193,7 +214,7 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Group Project Experiences</h2>
-          {RESUME_DATA.groupProjects.map((groupProject) => {
+          {RESUME_DATA.groupProjects.map((groupProject: GroupProject) => {
             return (
               <Card key={groupProject.title}>
                 <CardHeader>
@@ -244,7 +265,7 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Extracurricular Activities</h2>
-          {RESUME_DATA.work.map((work) => {
+          {RESUME_DATA.work.map((work: Work) => {
             return (
               <Card key={work.company}>
                 <CardHeader>
