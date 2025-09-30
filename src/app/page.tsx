@@ -23,6 +23,23 @@ export const metadata: Metadata = {
 ],
 };
 
+type Education = {
+    school: string;
+    degree: string;
+    start?: string;
+    end: string;
+    description: string;
+}
+type Work = {
+  company: string;
+  link?: string;
+  badges: readonly string[];
+  title: string;
+  start: string;
+  end: string;
+  description: string;
+  // logo?: string;
+};
 type GroupProject = {
   title: string;
   link?: string;
@@ -33,8 +50,8 @@ type GroupProject = {
   description: string;
   // logo?: string;
 };
-type Work = {
-  company: string;
+type Extracurricular = {
+  association: string;
   link?: string;
   badges: readonly string[];
   title: string;
@@ -168,7 +185,7 @@ export default function Page() {
 
         <Section>
           <h2 className="text-xl font-bold">Education</h2>
-          {RESUME_DATA.education.map((education: { school: string; start?: string; end?: string; degree: string; description?: string }) => {
+          {RESUME_DATA.education.map((education: Education) => {
             return (
               <Card key={education.school}>
                 <CardHeader>
@@ -212,6 +229,58 @@ export default function Page() {
             })}
           </div>
         </Section>
+
+        <Section>
+          <h2 className="text-xl font-bold">Internship</h2>
+          {RESUME_DATA.work.map((work: Work) => {
+            return (
+              <Card key={work.company}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      {work.link ? (
+                        <a className="underline" href={work.link}>
+                            {work.company} 🔗
+                        </a>
+                      ) : (
+                        <span>{work.company}</span>
+                      )}
+
+                      <span className="inline-flex gap-x-1">
+                        {work.badges.map((badge) => (
+                          <Badge
+                            variant="secondary"
+                            className="align-middle text-xs"
+                            key={badge}
+                          >
+                            {badge}
+                          </Badge>
+                        ))}
+                      </span>
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {work.start} - {work.end ?? "Present"}
+                    </div>
+                  </div>
+
+                  {work.title ? (
+                        <h4 className="font-mono text-sm leading-none">
+                            {work.title}
+                        </h4>
+                    ) : null}
+                </CardHeader>
+                <CardContent className="mt-2 text-xs">
+                    {work.description.split('\n').map((line, index, array) => (
+                        <div key={index} style={{ marginBottom: index === array.length - 1 ? '10px' : '0' }}>
+                        <span>&bull; {line}</span>
+                        </div>
+                    ))}
+                </CardContent>
+              </Card>
+            );
+          })}
+        </Section>
+
         <Section>
           <h2 className="text-xl font-bold">Group Project Experiences</h2>
           {RESUME_DATA.groupProjects.map((groupProject: GroupProject) => {
@@ -252,7 +321,6 @@ export default function Page() {
                     ) : null}
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">
-                    {/* {groupProject.description} */}
                     {groupProject.description.split('\n').map((line, index, array) => (
                         <div key={index} style={{ marginBottom: index === array.length - 1 ? '10px' : '0' }}>
                         <span>&bull; {line}</span>
@@ -263,24 +331,25 @@ export default function Page() {
             );
           })}
         </Section>
+        
         <Section>
           <h2 className="text-xl font-bold">Extracurricular Activities</h2>
-          {RESUME_DATA.work.map((work: Work) => {
+          {RESUME_DATA.extracurricular.map((extracurricular: Extracurricular) => {
             return (
-              <Card key={work.company}>
+              <Card key={extracurricular.association}>
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      {work.link ? (
-                        <a className="underline" href={work.link}>
-                            {work.company} 🔗
+                      {extracurricular.link ? (
+                        <a className="underline" href={extracurricular.link}>
+                            {extracurricular.association} 🔗
                         </a>
                       ) : (
-                        <span>{work.company}</span>
+                        <span>{extracurricular.association}</span>
                       )}
 
                       <span className="inline-flex gap-x-1">
-                        {work.badges.map((badge) => (
+                        {extracurricular.badges.map((badge) => (
                           <Badge
                             variant="secondary"
                             className="align-middle text-xs"
@@ -292,19 +361,18 @@ export default function Page() {
                       </span>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end ?? "Present"}
+                      {extracurricular.start} - {extracurricular.end ?? "Present"}
                     </div>
                   </div>
 
-                  {work.title ? (
+                  {extracurricular.title ? (
                         <h4 className="font-mono text-sm leading-none">
-                            {work.title}
+                            {extracurricular.title}
                         </h4>
                     ) : null}
                 </CardHeader>
                 <CardContent className="mt-2 text-xs">
-                    {/* {work.description} */}
-                    {work.description.split('\n').map((line, index, array) => (
+                    {extracurricular.description.split('\n').map((line, index, array) => (
                         <div key={index} style={{ marginBottom: index === array.length - 1 ? '10px' : '0' }}>
                         <span>&bull; {line}</span>
                         </div>
